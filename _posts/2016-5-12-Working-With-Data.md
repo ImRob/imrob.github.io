@@ -1,8 +1,7 @@
 ---
 layout: post
 title:  "Working with Data"
-date:   2013-11-10 10:18:00
-categories: Post Mordem
+date:   2016-5-12 10:18:00
 ---
 
 Earlier in my career I was tasked with creating a UI widget that was powered by a 3rd party API. This was before the current craze of functional programming and underscore was just becoming a thing.
