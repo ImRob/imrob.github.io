@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "Welcome to Jekyll!"
+date:   2013-11-10 10:18:00
+categories: Post Mordem
+---
 
 Earlier in my career I was tasked with creating a UI widget that was powered by a 3rd party API. This was before the current craze of functional programming and underscore was just becoming a thing.
 
