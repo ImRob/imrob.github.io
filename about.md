@@ -3,4 +3,4 @@ layout: page
 title: About me 
 ---
 
-This is a static page. It could be an 'about page' if you'd like.
+Experienced Front End Developer building web experiences for desktop, tablet and mobile. 
