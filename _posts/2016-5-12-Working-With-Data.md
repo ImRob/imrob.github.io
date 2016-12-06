@@ -21,7 +21,7 @@ forms and buttons are a bitch. the more interactive a form the more use cases yo
 
 as a small addendum, functional libraries like lodash make data manipulation easier to reason about. Currying functions can help reusability when we have code that performs the same task on different inputs. However doing it by hand often means you have to remember the details of 2 call sites. the place where you passed the first value and the final call site:
 
-{% highlight ruby %}
+{% highlight javascript %}
 
 javascript
 function greetTheJetsons(lastName){
@@ -40,5 +40,5 @@ hello('George')
 hello('Judy')
 hello('ElRoy')
 hello('Jane')
-{% highlight javascript %}
+{% endhighlight %}
 
