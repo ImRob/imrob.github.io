@@ -3,11 +3,71 @@
   <channel>
     <title></title>
     <description>random thoughts and snippet</description>
-    <link>http://localhost:4000//</link>
-    <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 07 Dec 2016 14:51:00 -0500</pubDate>
-    <lastBuildDate>Wed, 07 Dec 2016 14:51:00 -0500</lastBuildDate>
+    <link>https://imrob.github.io///</link>
+    <atom:link href="https://imrob.github.io///feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 12 Dec 2016 12:46:09 -0500</pubDate>
+    <lastBuildDate>Mon, 12 Dec 2016 12:46:09 -0500</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>The Internets Election</title>
+        <description>&lt;p&gt;One re-occuring theme in modern history is man vs machine. The bronze age, the industrial revolution, mathematics the technological age etc. Every so often, man makes such breakthrough in learning that it’s almost beyond his capacity to fully understand the new world in which he lives.&lt;/p&gt;
+
+&lt;p&gt;Usually this gap in understanding shows up in war. The Manhattan Project was a dream project for any ambitious physicist until they stepped back to really understand the scope of what they created. Suddenly the theoretical became real and everyone was forced to come to grips with the fact that man now had the means and methods to ending all life on earth.&lt;/p&gt;
+
+&lt;p&gt;Fast forward to today.&lt;/p&gt;
+
+&lt;p&gt;It’s been an interesting time to be in tech. This election cycle was…&lt;em&gt;interesting&lt;/em&gt;. I’m not going to get into politics, but rather the way news and data is being weaponized. I don’t think many people realize how big automation and bots really are. I know I didn’t until I worked in digital publishing and learned about programatic sales, automated bidding and the scope of user tracking. Think those posts in the comment section are from real people? It’s becoming increasingly likely they are automated or paid trolls. Shit, you can’t even get a concert ticket at face value anymore because an army of bots are beating you to the punch.&lt;/p&gt;
+
+&lt;p&gt;I didn’t always care about privacy. I wasn’t doing anything illegal, what should i worry about? But the amount of information that is available is staggering. This information can work in subtle ways. Someone knows that you’re looking for a plane ticket, and probably also the days you really want to travel, they are probably charging you a premium for your ticket, see Vitaly Tsyvinski’s excellent travel app. Or alerting potential employers that you are pregnant, or have small kids and making a judgement on your ability to contribute to the company before you even have an interview, or that you may have health issues that you prefer to keep private. Soon, employers will have an insane amount of data about applicants. I can’t imagine the repercussions.&lt;/p&gt;
+
+&lt;p&gt;This election cycle saw a record amount of buzz around fake news, foreign actors and email dumps. Not to mention connected devices taking down some of the most robust websites on the planet. It’s one thing when the internet explodes and gives us the crying Michael Jordan meme and occassional corporate email hack that spills all of Hollywoods gossip. But we may be moving past such rather innocent uses of its power, and I’m not even sure if there’s anything we can do to stop it.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 12 Dec 2016 05:18:00 -0500</pubDate>
+        <link>https://imrob.github.io///2016/12/12/The-Internets-Election.html</link>
+        <guid isPermaLink="true">https://imrob.github.io///2016/12/12/The-Internets-Election.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>The End Is Just The Beginning</title>
+        <description>&lt;p&gt;I’m writing this shortly after a site redesign while somethings are fresh in my brain. Maybe i’ll come back and look at this one day when in the midsts of a similar task.  What did I learn? What is the one thing i can take away from this expereince that can help me grow as a developer and a team member?&lt;/p&gt;
+
+&lt;p&gt;One thing I keep harping on is the end is just the beginning. We don’t know what we need when we build. Only the market does and they ultimately are the ones that validate all of the discussions we have in internal meetings and quick chats. We can think a feature is must have and obsess about it only to have the market return a collective, meh.&lt;/p&gt;
+
+&lt;p&gt;Often design will give me a UI and I implement it and we go back and forth a few times to iron out some rough spots, but we do so with a static document as our source of truth. The document represents the authoritative end. The redesign is finished when we accurately satisfy the graphic hierarchy of the document as well as any business logic. Then users test things and you have to iterate…and pivot…and the cycle starts.&lt;/p&gt;
+
+&lt;p&gt;This used to bother me, but I’ve come to realize that this is just the nature of the beast. It’s better to embrace it and have it work as a built in part of your design process. The pain comes when you spend so much time amongst yourselves trying to get things just right, to the point that your code suffers. What started as a square, was slowly given rounded corners, turned into a circle but now needs to support bezier curves.&lt;/p&gt;
+
+&lt;p&gt;This is one of the problems with inheritance paradigms. It’s difficult to accurately model real taxonomies because taxonomies are really really difficult to reason about. So let’s stop. Realize we don’t have a clue. We have hunches and really good guesses but no one really knows. And because of that it’s best to understand that when given a goal its just the beginning, aim to make your code as extensible, unopinionated and malleable as possible. You’ll thank yourself.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 08 Nov 2016 05:18:00 -0500</pubDate>
+        <link>https://imrob.github.io///2016/11/08/The-End-Is-Just-The-Beginning.html</link>
+        <guid isPermaLink="true">https://imrob.github.io///2016/11/08/The-End-Is-Just-The-Beginning.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Signal vs Noise</title>
+        <description>&lt;p&gt;Yesterday I met a family friend for lunch who had just finished a coding bootcamp and wanted to connect. I think I got more out of that coffee than I was able to give back. It was interesting to put myself in the shoes of a beginner again.&lt;/p&gt;
+
+&lt;p&gt;My coffee date wanted to know how do i keep up and what he should be learning next. I remember having that feeling of needing…no wanting…to know everything…now. I’m not sure if it’s age or becoming more comfortable in my abilities, and not feeling bad at saying what i don’t know, but i just felt sad. This guy felt he needed to know everything now in order to compete. He just graduated from a bootcamp. I get it, it’s hard to tell someone who just spent 12 weeks and however many thousands of dolllars in a competitive immersive program to be patient. That’s arrogant on my part.&lt;/p&gt;
+
+&lt;p&gt;One of my favorite voices in development is the team at 37 signals, and Jason Fried talks about it in a post called, 
+&lt;a href=&quot;https://signalvnoise.com/posts/3124-give-it-five-minutes&quot;&gt;Just Give It 5 Minutes&lt;/a&gt;. So often in meetings, meetups and casual conversations there is a tendency to prove your technical prowess by always having something smart to say, by rattling off all the newest things you’re playing with or contributing to. It’s cliche but time is the most valuable and precious thing we have and yet we treat it as an infinite resource. (Just spend all weekend reading up on algorithms!..as if thats a great use of time for 80% of devs)&lt;/p&gt;
+
+&lt;p&gt;A few years ago I talked to a guy from a new fitness startup who mentioned that his company’s product was written in Angular 1. The Angular team already gave word that they were doing a rewrite. I casually asked him how they’d manage the transition but couldn’t really get an answer. Earlier this year I was at a meetup hosted by that same company and that same developer gave a talk about migrating their app from Angular to React. I’m not writing this to be an ass. No one can predict the future and you do the best you can today with the information you have today. Writing software is hard. I immediately thought of all the time invested and the duplication of effort, damn, again I felt sad.&lt;/p&gt;
+
+&lt;p&gt;Let’s be honest. The time spent learning X means that you can’t learn Y or can’t meet Z who might be your future spouse, business partner, friend. It takes time for an idea or concept to really take hold in your mind. I’m always hesitant to present myself as the wise old fish, but my message to that new developer and to my younger self is to find calm in the chaos. Figure out what you want to create and then create it with whatever tools you have available right now (thanks Teddy Roosevelt). Focus on fewer, but bigger wins. Don’t reach for a new view layer just because ‘performance’ or it works great with ‘new thing from venerable startup’. Anything other than the task at hand is a distraction. Protecting your time will be the hardest thing you’ll have to do as a programmer and cruelly it’s a skill that takes time to develop.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 09 Oct 2016 06:18:00 -0400</pubDate>
+        <link>https://imrob.github.io///2016/10/09/Signal-vs-Noise.html</link>
+        <guid isPermaLink="true">https://imrob.github.io///2016/10/09/Signal-vs-Noise.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Working with Data</title>
@@ -47,8 +107,8 @@
 
 </description>
         <pubDate>Thu, 12 May 2016 06:18:00 -0400</pubDate>
-        <link>http://localhost:4000//2016/05/12/Working-With-Data.html</link>
-        <guid isPermaLink="true">http://localhost:4000//2016/05/12/Working-With-Data.html</guid>
+        <link>https://imrob.github.io///2016/05/12/Working-With-Data.html</link>
+        <guid isPermaLink="true">https://imrob.github.io///2016/05/12/Working-With-Data.html</guid>
         
         
       </item>
@@ -104,8 +164,8 @@ I’m also not sure how you validate route params (making sure its an integer, o
 
 </description>
         <pubDate>Sun, 10 Nov 2013 05:18:00 -0500</pubDate>
-        <link>http://localhost:4000//2013/11/10/React.html</link>
-        <guid isPermaLink="true">http://localhost:4000//2013/11/10/React.html</guid>
+        <link>https://imrob.github.io///2013/11/10/React.html</link>
+        <guid isPermaLink="true">https://imrob.github.io///2013/11/10/React.html</guid>
         
         
       </item>
