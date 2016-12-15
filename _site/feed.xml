@@ -3,10 +3,10 @@
   <channel>
     <title></title>
     <description>random thoughts and snippet</description>
-    <link>https://imrob.github.io///</link>
-    <atom:link href="https://imrob.github.io///feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 12 Dec 2016 12:46:09 -0500</pubDate>
-    <lastBuildDate>Mon, 12 Dec 2016 12:46:09 -0500</lastBuildDate>
+    <link>http://localhost:4000//</link>
+    <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 15 Dec 2016 12:57:14 -0500</pubDate>
+    <lastBuildDate>Thu, 15 Dec 2016 12:57:14 -0500</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
@@ -24,8 +24,37 @@
 &lt;p&gt;This election cycle saw a record amount of buzz around fake news, foreign actors and email dumps. Not to mention connected devices taking down some of the most robust websites on the planet. It’s one thing when the internet explodes and gives us the crying Michael Jordan meme and occassional corporate email hack that spills all of Hollywoods gossip. But we may be moving past such rather innocent uses of its power, and I’m not even sure if there’s anything we can do to stop it.&lt;/p&gt;
 </description>
         <pubDate>Mon, 12 Dec 2016 05:18:00 -0500</pubDate>
-        <link>https://imrob.github.io///2016/12/12/The-Internets-Election.html</link>
-        <guid isPermaLink="true">https://imrob.github.io///2016/12/12/The-Internets-Election.html</guid>
+        <link>http://localhost:4000//2016/12/12/The-Internets-Election.html</link>
+        <guid isPermaLink="true">http://localhost:4000//2016/12/12/The-Internets-Election.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Scroll With Me</title>
+        <description>&lt;p&gt;The other day I was looking for black friday steals and came across some janky scroll behavior. The page would stutter. I wasn’t sure if it was just my computer or not, so I asked my wife if she saw the same thing on her machine. She did. I opened an incognito window and disabled extensions. Still there. Hmm.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/rl_sg.gif&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I fired up dev tools and started to take a peak. Figuring out performance issues on animations and scroll events is difficult because so many unrelated things can be a cause and the scroll event fires a ton. My first thought was to go to the timeline and record the behavior while i scrolled. Which lead to this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/breakpoint.png&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A ton of scroll events, not shocking, but then looking at the call stack I realized how many scripts were listening to the scroll event.&lt;/p&gt;
+
+&lt;p&gt;We have in house UI functionality and 3rd party partners all querying the DOM for data anytime a scroll event happens. This is expensive. In their defense, they did try to throttle their events, but no amount of throttling is going to make up for so many scripts listening to such an active event. I’ve been behind that gun and its hard to argue with business when you have to implement a less than ideal 3rd party widget. Pick your battles.&lt;/p&gt;
+
+&lt;p&gt;The interesting part came when i drilled into a particularly active 3rd party script. It wasn’t even looking for scroll events, it was looking for &lt;strong&gt;ANY&lt;/strong&gt; event. Any time you moved the mouse, scrolled…sneezed it fired. Worse, it was being fired from within 2 closures, which means that nothing in these larger functions can be garbage collected since their environment needs to be reachable by any inner functions (and those closures contained a ton of methods and nested objects which also have to be maintained).&lt;/p&gt;
+
+&lt;p&gt;The memory allocation timeline confirmed a massive buildup. I’m sure there may be a solid technical/business reason for this, but remember, my little adventure began because my page was hiccuping every time I tried to find product. This was a customer facing problem compromising the core functionality of a webpage.&lt;/p&gt;
+
+&lt;p&gt;Clearly this script is doing analytics on how users interact with the page, but why track every little thing the user does? At some point I’d think there would be a law of diminishing returns with such a large data set. I get tracking clicks or even how far down a page a user scrolls, this has clear actionable business use.&lt;/p&gt;
+
+&lt;p&gt;But hey, i’m just a curious developer poking around dev tools and those decisions are above my pay grade.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 28 Nov 2016 05:18:00 -0500</pubDate>
+        <link>http://localhost:4000//2016/11/28/Scroll-With-Me.html</link>
+        <guid isPermaLink="true">http://localhost:4000//2016/11/28/Scroll-With-Me.html</guid>
         
         
       </item>
@@ -43,8 +72,8 @@
 &lt;p&gt;This is one of the problems with inheritance paradigms. It’s difficult to accurately model real taxonomies because taxonomies are really really difficult to reason about. So let’s stop. Realize we don’t have a clue. We have hunches and really good guesses but no one really knows. And because of that it’s best to understand that when given a goal its just the beginning, aim to make your code as extensible, unopinionated and malleable as possible. You’ll thank yourself.&lt;/p&gt;
 </description>
         <pubDate>Tue, 08 Nov 2016 05:18:00 -0500</pubDate>
-        <link>https://imrob.github.io///2016/11/08/The-End-Is-Just-The-Beginning.html</link>
-        <guid isPermaLink="true">https://imrob.github.io///2016/11/08/The-End-Is-Just-The-Beginning.html</guid>
+        <link>http://localhost:4000//2016/11/08/The-End-Is-Just-The-Beginning.html</link>
+        <guid isPermaLink="true">http://localhost:4000//2016/11/08/The-End-Is-Just-The-Beginning.html</guid>
         
         
       </item>
@@ -63,8 +92,8 @@
 &lt;p&gt;Let’s be honest. The time spent learning X means that you can’t learn Y or can’t meet Z who might be your future spouse, business partner, friend. It takes time for an idea or concept to really take hold in your mind. I’m always hesitant to present myself as the wise old fish, but my message to that new developer and to my younger self is to find calm in the chaos. Figure out what you want to create and then create it with whatever tools you have available right now (thanks Teddy Roosevelt). Focus on fewer, but bigger wins. Don’t reach for a new view layer just because ‘performance’ or it works great with ‘new thing from venerable startup’. Anything other than the task at hand is a distraction. Protecting your time will be the hardest thing you’ll have to do as a programmer and cruelly it’s a skill that takes time to develop.&lt;/p&gt;
 </description>
         <pubDate>Sun, 09 Oct 2016 06:18:00 -0400</pubDate>
-        <link>https://imrob.github.io///2016/10/09/Signal-vs-Noise.html</link>
-        <guid isPermaLink="true">https://imrob.github.io///2016/10/09/Signal-vs-Noise.html</guid>
+        <link>http://localhost:4000//2016/10/09/Signal-vs-Noise.html</link>
+        <guid isPermaLink="true">http://localhost:4000//2016/10/09/Signal-vs-Noise.html</guid>
         
         
       </item>
@@ -107,8 +136,8 @@
 
 </description>
         <pubDate>Thu, 12 May 2016 06:18:00 -0400</pubDate>
-        <link>https://imrob.github.io///2016/05/12/Working-With-Data.html</link>
-        <guid isPermaLink="true">https://imrob.github.io///2016/05/12/Working-With-Data.html</guid>
+        <link>http://localhost:4000//2016/05/12/Working-With-Data.html</link>
+        <guid isPermaLink="true">http://localhost:4000//2016/05/12/Working-With-Data.html</guid>
         
         
       </item>
@@ -164,8 +193,8 @@ I’m also not sure how you validate route params (making sure its an integer, o
 
 </description>
         <pubDate>Sun, 10 Nov 2013 05:18:00 -0500</pubDate>
-        <link>https://imrob.github.io///2013/11/10/React.html</link>
-        <guid isPermaLink="true">https://imrob.github.io///2013/11/10/React.html</guid>
+        <link>http://localhost:4000//2013/11/10/React.html</link>
+        <guid isPermaLink="true">http://localhost:4000//2013/11/10/React.html</guid>
         
         
       </item>

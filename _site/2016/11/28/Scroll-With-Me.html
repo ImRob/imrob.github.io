@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>Rob Burkins portfolio - random thoughts and snippet</title>
+    <meta name="description" content="keeping computers 'putin" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <!-- Customisation  -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
+
+</head>
+<body class="home-template">
+
+    <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="back-button icon-arrow-left" href="/">Home</a>
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">Scroll With Me</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2016-11-28">28 Nov 2016</time>
+                
+            </section>
+        </header>
+
+<!--         <header class="post-header">
+            <a id="blog-logo" href="http://localhost:4000">
+                
+                    <span class="blog-title">Rob Burkins portfolio</span>
+                
+            </a>
+        </header> -->
+
+        <!-- <span class="post-meta">
+            <time datetime="2016-11-28">28 Nov 2016</time>
+            
+        </span> -->
+
+        <!-- <h1 class="post-title">Scroll With Me</h1> -->
+
+        <section class="post-content">
+            <p>The other day I was looking for black friday steals and came across some janky scroll behavior. The page would stutter. I wasn’t sure if it was just my computer or not, so I asked my wife if she saw the same thing on her machine. She did. I opened an incognito window and disabled extensions. Still there. Hmm.</p>
+
+<p><img src="/assets/images/rl_sg.gif" alt="alt text" title="Logo Title Text 1" /></p>
+
+<p>I fired up dev tools and started to take a peak. Figuring out performance issues on animations and scroll events is difficult because so many unrelated things can be a cause and the scroll event fires a ton. My first thought was to go to the timeline and record the behavior while i scrolled. Which lead to this:</p>
+
+<p><img src="/assets/images/breakpoint.png" alt="alt text" title="Logo Title Text 1" /></p>
+
+<p>A ton of scroll events, not shocking, but then looking at the call stack I realized how many scripts were listening to the scroll event.</p>
+
+<p>We have in house UI functionality and 3rd party partners all querying the DOM for data anytime a scroll event happens. This is expensive. In their defense, they did try to throttle their events, but no amount of throttling is going to make up for so many scripts listening to such an active event. I’ve been behind that gun and its hard to argue with business when you have to implement a less than ideal 3rd party widget. Pick your battles.</p>
+
+<p>The interesting part came when i drilled into a particularly active 3rd party script. It wasn’t even looking for scroll events, it was looking for <strong>ANY</strong> event. Any time you moved the mouse, scrolled…sneezed it fired. Worse, it was being fired from within 2 closures, which means that nothing in these larger functions can be garbage collected since their environment needs to be reachable by any inner functions (and those closures contained a ton of methods and nested objects which also have to be maintained).</p>
+
+<p>The memory allocation timeline confirmed a massive buildup. I’m sure there may be a solid technical/business reason for this, but remember, my little adventure began because my page was hiccuping every time I tried to find product. This was a customer facing problem compromising the core functionality of a webpage.</p>
+
+<p>Clearly this script is doing analytics on how users interact with the page, but why track every little thing the user does? At some point I’d think there would be a law of diminishing returns with such a large data set. I get tracking clicks or even how far down a page a user scrolls, this has clear actionable business use.</p>
+
+<p>But hey, i’m just a curious developer poking around dev tools and those decisions are above my pay grade.</p>
+
+        </section>
+
+        
+
+        <footer class="post-footer">
+            <!-- If we want to display author's name and bio -->
+            
+                <figure class="author-image">
+                    <a class="img" href="/" style="background-image: url(/assets/images/profile.png)">
+                    <span class="hidden">Rob Burkins's Picture</span></a>
+                </figure>
+                <section class="author">
+                    <!-- Author Name -->
+                    <h4> Rob Burkins </h4>
+                    <!-- Author Bio -->
+                    <p>
+                        Random thoughts and snippets about the internets
+                    </p>
+                </section>
+            
+
+            <!-- Share links section -->
+            <section class="share">
+    <h4>Share this post</h4>
+    <a class="icon-twitter" href="http://twitter.com/share?text=Scroll With Me&amp;url=https://imrob.github.io//2016/11/28/Scroll-With-Me.html"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <span class="hidden">Twitter</span>
+    </a>
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://imrob.github.io//2016/11/28/Scroll-With-Me.html"
+        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <span class="hidden">Facebook</span>
+    </a>
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=https://imrob.github.io//2016/11/28/Scroll-With-Me.html"
+       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+        <span class="hidden">Google+</span>
+    </a>
+</section>
+
+            <!-- Disqus comments -->
+            
+
+        </footer>
+
+    </article>
+
+</main>
+
+    <footer class="site-footer clearfix">
+      <section class="copyright">
+        <a href="/">Rob Burkins portfolio</a> &copy; 
+               &bull; All rights reserved.
+      </section>
+      <section class="poweredby">Made with Jekyll using 
+        <a href="http://github.com/rosario/kasper">Kasper theme</a>
+      </section>
+    </footer>
+    
+    <script type="text/javascript" src="/assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+    <!-- Google Analytics Tracking code -->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>   
+</body>
+</html>
