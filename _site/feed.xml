@@ -5,9 +5,41 @@
     <description>random thoughts and snippet</description>
     <link>http://localhost:4000//</link>
     <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 15 Dec 2016 12:57:14 -0500</pubDate>
-    <lastBuildDate>Thu, 15 Dec 2016 12:57:14 -0500</lastBuildDate>
+    <pubDate>Tue, 27 Dec 2016 14:01:40 -0500</pubDate>
+    <lastBuildDate>Tue, 27 Dec 2016 14:01:40 -0500</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>Slider</title>
+        <description>&lt;p data-height=&quot;500&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;YpoeBa&quot; data-default-tab=&quot;result&quot; data-user=&quot;burkins&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Slide Library&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/burkins/pen/YpoeBa/&quot;&gt;Slide Library&lt;/a&gt; by Rob (&lt;a href=&quot;http://codepen.io/burkins&quot;&gt;@burkins&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;This is a slide library created to centralize the core functionality of a bunch of one off solutions in a UI.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Why is this interesting or noteworthy&lt;/strong&gt;?&lt;/p&gt;
+
+&lt;p&gt;It’s probably a right of passage in front end to create a slider, but with this one I wanted to think about the separations of concerns more clearly so that the slider could be updated in a way that didn’t break already established functionality.&lt;/p&gt;
+
+&lt;p&gt;One of the reasons I didn’t go for an off the shelf solution was that our needs were unique enough that I would have spent as much time hacking around an existing solution than building my own.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What were those unique issues?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Exisitng HTML didn’t conform to plugin scaffold. Design needed more flexibility.&lt;/li&gt;
+  &lt;li&gt;We had to support left and right button navigation for users on desktop who were not able to scroll horizontally.&lt;/li&gt;
+  &lt;li&gt;Not all teasers were of same size/offset. Notice example 3’s ‘View More’ button.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Bonus points&lt;/strong&gt;:
+How do you stop an animated scroll event so that a user’s interaction overrides the animated scroll event?…you pour some whiskey and cry.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 27 Dec 2016 05:18:00 -0500</pubDate>
+        <link>http://localhost:4000//2016/12/27/Slider.html</link>
+        <guid isPermaLink="true">http://localhost:4000//2016/12/27/Slider.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>The Internets Election</title>
